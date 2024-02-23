@@ -1,0 +1,12 @@
+def separate_tasks_alphabetically(tasks):
+    tasks.sort()  # Sort tasks alphabetically
+    separated_tasks = {}
+
+    for task in tasks:
+        first_letter = task[0].upper()  # Get the first letter of the task
+        if first_letter not in separated_tasks:
+            separated_tasks[first_letter] = [task]
+        else:
+            separated_tasks[first_letter].append(task)
+
+    return separated_tasks
